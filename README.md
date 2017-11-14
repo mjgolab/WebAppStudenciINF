@@ -22,5 +22,12 @@ Prosta przykładowa aplikacja webowa umożliwiająca następujące czynności i 
 5. Wciśnij F5, aby zacząć debugowanie.
 
 ### Komentarz
-// TODO: Uzupełnić komentarz do aplikacji.
-// Wprowadzić wersję ENG.
+Moja pierwsza aplikacja webowa!
+
+Na początku plan był taki, aby połączyć dwie tabele (tabele Grupa i Student) ze sobą za pomocą klucza obcego, ale przy tworzeniu nowego obiektu pojawiały się problemy. Ostatecznie zrezygnowałem z dwóch tabel i zostałem przy jednej. Wszystko było w porzadku, aż do momentu zmiany typu danych dla pola BirthDate. Podczas debugowania zostawiłem to pole jako pole typu `string`, ale prędzej czy później trzeba było je zmienić na właściwy typ danych `DateTime`, jeśli chce trzymać się konwencji. 
+
+Tutaj pojawiły się schody. 
+
+Dane w tabeli są w porządku i nie ma problemu z ich pobieraniem. Natomiast ich końcowy format na front-endzie różni się tym od danych w tabeli - pojawia się atrybut Time i czas obok daty urodzenia studenta. Próbowałem ten problem rozwiązać, lecz bezskutecznie.
+
+Z drugiej strony, sam formularz zmusza użytkownika do wpisania daty i niczego innego (jako ciąg znaków w tym przypadku), więc teoretycznie `string` mógłby w tym wypadku przejść. Bądź co bądź, zostałem przy prawidłowym, lecz niesatysfakcjonującym rozwiązaniu. Mam nadzieję, że kiedyś uda mi się ten niewielki problem rozwiązać i nie zaważy to zbytnio na ocenie końcowej z projektu.
