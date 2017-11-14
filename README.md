@@ -1,5 +1,7 @@
 ## (PL): WebAppStudenciINF
 
+<img src="screenshot-localhost-57484-2017-11-14-23-20-49-319.png" height = 450>
+
 **Aplikacja jest warunkiem otrzymania oceny z przedmiotu "Programowanie .NET".**
 
 Prosta przykładowa aplikacja webowa umożliwiająca następujące czynności i funkcje.
@@ -26,7 +28,7 @@ Moja pierwsza aplikacja webowa!
 
 Na początku plan był taki, aby połączyć dwie tabele (tabele Grupa i Student) ze sobą za pomocą klucza obcego, ale przy tworzeniu nowego obiektu pojawiały się problemy. Ostatecznie zrezygnowałem z dwóch tabel i zostałem przy jednej. Wszystko było w porzadku, aż do momentu zmiany typu danych dla pola BirthDate. Podczas debugowania zostawiłem to pole jako pole typu `string`, ale prędzej czy później trzeba było je zmienić na właściwy typ danych `DateTime`, jeśli chce trzymać się konwencji. 
 
-Tutaj pojawiły się schody. 
+Tutaj pojawiły się problemy.
 
 Dane w tabeli są w porządku i nie ma problemu z ich pobieraniem. Natomiast ich końcowy format na front-endzie różni się tym od danych w tabeli - pojawia się atrybut Time i czas obok daty urodzenia studenta. Próbowałem ten problem rozwiązać, lecz bezskutecznie.
 
