@@ -1,0 +1,116 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+<div class="page-header">
+    <h1>WebApp - Studenci INF</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="alert" data-bind="visible: error">
+            <p class="alert alert-danger" data-bind="text: error"></p>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Lista Studentów</h2>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled" data-bind="foreach: students">
+                    <li>
+                        <a href="#" id="button" class="btn btn-info btn-sm" data-bind="click: $parent.getStudentDetails">
+                            <span class="glyphicon glyphicon-user"></span> <span data-bind="text: Name + ' ' + LastName"></span>
+                        </a>
+
+                        <a href="#" id="button" class="btn btn-danger btn-sm" data-bind="click: $parent.deleteStudent">
+                            <span class="glyphicon glyphicon-remove-circle"></span> Usuń
+                        </a><br />
+                        <br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ko if:details() -->
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Szczegóły</h2>
+            </div>
+            <table class="table">
+                <tr><td><strong>Imię:</strong></td><td data-bind="text: details().Name"></td></tr>
+                <tr><td><strong>Nazwisko:</strong></td><td data-bind="text: details().LastName"></td></tr>
+                <tr><td><strong>Data urodzenia:</strong></td><td data-bind="text: details().BirthDate"></td></tr>
+                <tr><td><strong>Identyfikator studenta:</strong></td><td data-bind="text: details().SID"></td></tr>
+                <tr><td><strong>Grupa:</strong></td><td data-bind="text: details().GroupName"></td></tr>
+                <tr><td><strong>Kierunek:</strong></td><td data-bind="text: details().Course"></td></tr>
+                <tr><td><strong>Specjalność:</strong></td><td data-bind="text: details().Specialty"></td></tr>
+            </table>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Dodaj Studenta</h2>
+            </div>
+
+            <div class="panel-body">
+                <form class="form-horizontal" data-bind="submit: addNewStudent">
+
+                    <div class="form-group" data-bind="with: newStudent">
+
+                        <label for="inputName" class="col-sm-4 control-label">Imię</label>
+                        <div>
+                            <input type="text" class="form-control" id="inputName" data-bind="value:Name" />
+                        </div>
+
+
+                        <label for="inputLastName" class="col-sm-4 control-label">Nazwisko</label>
+                        <div>
+                            <input type="text" class="form-control" id="inputLastName" data-bind="value:LastName" />
+                        </div>
+
+                        <label for="selectBirthDate" class="col-sm-4 control-label">Data urodzenia</label>
+                        <div>
+                            <input type="date" class="form-control" id="selectBirthDate" data-bind="value:BirthDate" />
+                        </div>
+
+                        <label for="inputSID" class="col-sm-4 control-label">Identyfikator studenta</label>
+                        <div>
+                            <input type="text" class="form-control" id="inputSID" data-bind="value:SID" />
+                        </div>
+
+                        <label for="selectGroup" class="col-sm-4 control-label">Grupa</label>
+                        <div>
+                            <select class="form-control" id="selectGroup" data-bind="value: GroupName">
+                                <option>INF_ITO</option>
+                                <option>INF_BSK</option>
+                            </select>
+                        </div>
+
+                        <label for="selectCourse" class="col-sm-4 control-label">Kierunek</label>
+                        <div>
+                            <select class="form-control" id="selectCourse" data-bind="value:Course">
+                                <option>Informatyka</option>
+                            </select>
+                        </div>
+
+                        <label for="selectSpecialty" class="col-sm-4 control-label">Specjalność</label>
+                        <div>
+                            <select class="form-control" id="selectSpecialty" data-bind="value: Specialty">
+                                <option>Inżynier Testów Oprogramowania</option>
+                                <option>Bezpieczeństwo Sieci Komputerowych</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Zatwierdź</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
