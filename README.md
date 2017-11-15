@@ -12,15 +12,16 @@ Prosta przykładowa aplikacja webowa umożliwiająca następujące czynności i 
 
 ### Wymagania / Narzędzia i technologie:
 * Visual Studio [2017].
+* .NET Framework 4.6.1.
 * SQL Server 13.0.4001 [LocalDB].
 * Entity Framework v6.0.
 * Bootstrap, jQuery, knockout.js.
 
 ### Uruchomienie:
-1. Pobierz projekt. Uruchom go za pomocą Visual Studio.
-2. Skompiluj rozwiązanie.
-3. Otwórz konsolę menedżera pakietów NuGet (Narzędzia => Menedżer Pakietów NuGet => Konsola menedżera pakietów).
-4. W oknie konsoli, wpisz następującą komendę: `Update-Database`.
+1. Pobierz projekt. Uruchom go za pomocą Visual Studio (plik z rozszerzeniem .sln).
+2. Otwórz konsolę menedżera pakietów NuGet (Narzędzia => Menedżer Pakietów NuGet => Konsola menedżera pakietów).
+3. Na dole ekranu pojawi się okno konsoli NuGet. Kliknij na przycisk `Przywróć`.
+4. W oknie konsoli wpisz następującą komendę: `Update-Database`.
 5. Wciśnij F5, aby zacząć debugowanie.
 
 ### Komentarz
